@@ -13,10 +13,10 @@
 <div class="container">
     <label>Lookup Host:</label>
     <form action="<?php echo ($_SERVER['PHP_SELF']); ?>" method="post">
-        <input type="text" name="domain">
+        <input type="text" name="domain"placeholder="my.unm.edu">
         <br>
         <br>
-        <input type="submit" value="Search" placeholder="@unm.edu">
+        <input type="submit" value="Search">
     </form>
 </div>
 <hr>
