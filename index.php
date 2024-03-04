@@ -8,10 +8,10 @@
 <div class="container">
     <label>Lookup Department:</label>
     <form action="search.php" method="post">
-      <input type="text" name="search">
+      <input type="text" name="search"  placeholder="Department">
     <br>
         <br>
-        <input type="submit" value="Search" placeholder="Department">
+        <input type="submit" value="Search">
     </form>
 </div>
  <a href="dns.php">DNS Lookup</a> 
