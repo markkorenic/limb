@@ -1,4 +1,4 @@
-<?php include "templates/header.php" ?>
+?php include "templates/header.php" ?>
 <link rel="stylesheet" href="css/style.css">
 <a href="index.php"> Return to Search</a>
 <br>
@@ -9,11 +9,15 @@ require_once('config.php');
 require("check_input.php");
 $search = check_input($_POST['search']);
 if (isset($_POST['search'])) {
-// 'search' relates to the form name in index.php, cool!
-
+    /*---------------------------------------------------------------
+    * Establish database query
+    *----------------------------------------------------------------*/
     $sql = "select * from local_it where department like '%$search%'";
-    //Same here!
-
+    
+    /* ----------------------------------------------------------------
+    * Check if DB connection is true and return search results from 
+    * 'local_it' table
+    *-----------------------------------------------------------------*/
     if (isset($conn)) {
         $result = mysqli_query($conn, $sql);
         printf("Search returned %d result(s) for '$search'"."\n", mysqli_num_rows($result));
@@ -31,12 +35,11 @@ border:1px solid black;
     <tr>
         <th>Department</th>
         <th>Local IT</th>
+        <th>ITO</th>
         <th>Resolution</th>
-        <th>Updated</th>
-
     </tr>
         <?php
-
+        
         if (isset($result)) {
         // fetch data based on search
         if ($result->num_rows > 0){
@@ -45,8 +48,9 @@ border:1px solid black;
         <tr>
             <td><?php echo $row["department"];?></td>
             <td><?php echo $row["local_it"];?></td>
+            <td><?php echo $row["ito_name"];?></td>
             <td><?php echo $row["resolution"];?></td>
-            <td><?php echo $row["updated"];?></td>
+            <!--<td><?php echo $row["updated"];?></td>-->
         </tr>
             <?php
         } // end while
@@ -62,3 +66,4 @@ border:1px solid black;
 ?>
 </thead>
      </table>
+
