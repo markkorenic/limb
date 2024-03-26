@@ -1,9 +1,6 @@
 <?php require_once('config.php'); ?>
+<?php include 'templates/header.php' ?>
 
-<html lang="en">
-<head>
-    <title> L.I.M.B.</title>
-</head>
 <link rel="stylesheet" href="css/style.css">
 
 <body style="background-color:beige;">
@@ -21,4 +18,3 @@
  <a href="dns.php">DNS Lookup</a> 
 <hr>
 </body>
-</html>
