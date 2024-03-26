@@ -1,3 +1,3 @@
 # limb
 
-An efficient, fast Local IT query those who miss LAMB
+An efficient, fast Local IT query for those who miss LAMB
